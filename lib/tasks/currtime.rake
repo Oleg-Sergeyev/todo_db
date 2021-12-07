@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :test do
   desc 'Current time'
   task :currtime do
