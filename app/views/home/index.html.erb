@@ -257,7 +257,11 @@
     <!-- /.container -->
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
+  <!-- Bootstrap core JavaScript
   <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>-->
 
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "jquery.min.js" %>
+  <%= javascript_include_tag "bootstrap.bundle.min.js" %>
+<% end %>
