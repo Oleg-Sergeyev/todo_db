@@ -3,7 +3,6 @@
 //= link jquery.min.js
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
 //= require jquery.easing
 //= require jqBootstrapValidation
 //= require contact_me
