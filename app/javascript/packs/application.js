@@ -8,8 +8,6 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-require(Rails.root.join('app/javascript/packs/custom'))
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
