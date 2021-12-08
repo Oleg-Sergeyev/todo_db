@@ -23,7 +23,76 @@
   </head>
 
   <body>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Стартовый шаблон BS 4.3.1</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html">О сайте</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Сервис</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Контакты</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Порфолио
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="portfolio-1-col.html">Порфолио в 1 колонку</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">Порфолио в 2 колонки</a>
+              <a class="dropdown-item" href="portfolio-3-col.html">Порфолио в 3 колонки</a>
+              <a class="dropdown-item" href="portfolio-4-col.html">Порфолио в 4 колонки</a>
+              <a class="dropdown-item" href="portfolio-item.html">Порфолио блок</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Блок
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="blog-home-1.html">Блог с сайдбаром</a>
+              <a class="dropdown-item" href="blog-home-2.html">Блок без сайдбара</a>
+              <a class="dropdown-item" href="blog-post.html">Отдельная страница</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Другие страницы
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="full-width.html">Пустая страница</a>
+              <a class="dropdown-item" href="sidebar.html">Страница с сайдбаром</a>
+              <a class="dropdown-item" href="faq.html">FAQ</a>
+              <a class="dropdown-item" href="404.html">Страница ошибки 404</a>
+              <a class="dropdown-item" href="pricing.html">Карточки цен</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <%= yield %>
     
+<!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>-->
+
+
   </body>
 </html>
