@@ -1,3 +1,12 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
 //= link jquery.min.js
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require jquery.easing
+//= require jqBootstrapValidation
+//= require contact_me
+//= require js/agency.min
+//= require turbolinks
+//= require_tree 
