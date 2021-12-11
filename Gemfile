@@ -45,6 +45,7 @@ group :development do
   gem 'date'
   gem 'jquery-rails'
   gem 'bootstrap'
+  gem 'lorem_ipsum_amet', '~> 0.6.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,0 +1,11 @@
+logged_in:
+  about:
+    text: "About"
+    url: '/about'
+  help:
+    text: "Help"
+    url: '/help'
+  cout:
+    text: "Count"
+    url: '/count'
+
