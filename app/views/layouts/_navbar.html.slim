@@ -1,0 +1,29 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+  .container-fluid
+    a.navbar-brand.nav-link.disabled[href=""]
+      | Меню
+    |  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="> 
+  span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+
+  ul.navbar-nav
+    li.nav-item
+      =
+      -     	    link_to_unless_current("Главная", { controller: "home", action: "index" }, class: "nav-link") do
+      -       	      link_to("Главная", { controller: "home", action: "index" }, class: "nav-link disabled")
+      -     	    end
+    li.nav-item
+      =
+      - 	    link_to_unless_current("О нас", { controller: "about", action: "index" }, class: "nav-link") do
+      -               link_to("О нас", { controller: "about", action: "index" }, class: "nav-link disabled") 
+      - 	    end
+    li.nav-item
+      = 
+      -  	    link_to_unless_current( "Помощь", { controller: "help", action: "index" }, class: "nav-link") do
+      - 	      link_to( "Помощь", { controller: "help", action: "index" }, class: "nav-link disabled")
+      - 	   end
+    li.nav-item
+      = 
+      -             link_to_unless_current( "Счетчик", { controller: "count", action: "index" }, class: "nav-link") do
+      -               link_to( "Счетчик", { controller: "count", action: "index" }, class: "nav-link disabled")
+      -            end
