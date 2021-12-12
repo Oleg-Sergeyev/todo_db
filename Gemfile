@@ -43,9 +43,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'date'
-  gem 'jquery-rails'
-  gem 'bootstrap'
+  #gem 'jquery-rails'
+  #gem 'bootstrap'
   gem 'lorem_ipsum_amet', '~> 0.6.2'
+  gem 'slim-rails'
+  gem 'html2slim'
+  gem 'erb_lint'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

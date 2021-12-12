@@ -5,7 +5,10 @@ logged_in:
   help:
     text: "Help"
     url: '/help'
-  cout:
+  count:
     text: "Count"
     url: '/count'
+error_404:
+    text: "Erorr_404"
+    url: '/error_404'
 
