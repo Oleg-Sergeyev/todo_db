@@ -1,9 +1,27 @@
 # frozen_string_literal: true
 
+#####################################################################################################################
+# !!! К сожалению файлики(txt) канули в небытие из-за глюка vscoder'а с гитом. Клянусь все работало, соласно связям.#
+# emails.txt                                                                                                        #
+# petrov_aa@mail.ru                                                                                                 #
+# ...                                                                                                               #
+# roles.txt                                                                                                         #
+# Системный администратор;System(s) Administrator                                                                   #
+# ...                                                                                                               #
+# events.txt                                                                                                        #
+# DSGN.Создать дизайн макет;Разработать и согласовать дизайн макет продукта с заказчиком                            #
+# OS_SETUP.Запустить Linux-сервер                                                                                   #
+# ...                                                                                                               #
+# items.txt                                                                                                         #
+# DSGN.Подготовка дизайн-проекта                                                                                    #
+# OS_SETUP.Установка Ubuntu server x64                                                                              #
+# ...                                                                                                               #
+#####################################################################################################################
+
 namespace :tables do
   desc 'Fill data into tables'
   task fill_tables: :environment do
-    [Item, Event, User, Role].map(&:delete_all)
+    # [Item, Event, User, Role].map(&:delete_all) Очистка таблиц
     # filling roles
     File.open("#{PATH_LIB}/roles.txt").each_line do |row|
       arr = row.split(';').map(&:chomp)
