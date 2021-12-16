@@ -1,22 +1,23 @@
 # frozen_string_literal: true
 
-#####################################################################################################################
-# !!! К сожалению файлики(txt) канули в небытие из-за глюка vscoder'а с гитом. Клянусь все работало, соласно связям.#
-# emails.txt                                                                                                        #
-# petrov_aa@mail.ru                                                                                                 #
-# ...                                                                                                               #
-# roles.txt                                                                                                         #
-# Системный администратор;System(s) Administrator                                                                   #
-# ...                                                                                                               #
-# events.txt                                                                                                        #
-# DSGN.Создать дизайн макет;Разработать и согласовать дизайн макет продукта с заказчиком                            #
-# OS_SETUP.Запустить Linux-сервер                                                                                   #
-# ...                                                                                                               #
-# items.txt                                                                                                         #
-# DSGN.Подготовка дизайн-проекта                                                                                    #
-# OS_SETUP.Установка Ubuntu server x64                                                                              #
-# ...                                                                                                               #
-#####################################################################################################################
+###########################################################################################
+# !!! К сожалению файлики(txt) канули в небытие из-за глюка vscoder'а с гитом.            #
+# Автозаполнение таблиц в соответсвии с целостностю связей
+# emails.txt                                                                              #
+# petrov_aa@mail.ru                                                                       #
+# ...                                                                                     #
+# roles.txt                                                                               #
+# Системный администратор;System(s) Administrator                                         #
+# ...                                                                                     #
+# events.txt                                                                              #
+# DSGN.Создать дизайн макет;Разработать и согласовать дизайн макет продукта с заказчиком  #
+# OS_SETUP.Запустить Linux-сервер                                                         #
+# ...                                                                                     #
+# items.txt                                                                               #
+# DSGN.Подготовка дизайн-проекта                                                          #
+# OS_SETUP.Установка Ubuntu server x64                                                    #
+# ...                                                                                     #
+###########################################################################################
 
 namespace :tables do
   desc 'Fill data into tables'
@@ -26,7 +27,7 @@ namespace :tables do
     File.open("#{PATH_LIB}/roles.txt").each_line do |row|
       arr = row.split(';').map(&:chomp)
       role = Role.new name: arr.first, code: arr.last
-      role.save if role.valid? == true
+      role.save if role.valid?
     end
     roles = ActiveRecord::Base.connection.exec_query('SELECT id FROM roles')
     # filling users
@@ -35,7 +36,7 @@ namespace :tables do
                       email: row.chomp,
                       active: true,
                       role_id: roles.rows.sample.first
-      user.save if user.valid? == true
+      user.save if user.valid?
     end
     users = ActiveRecord::Base.connection.exec_query('SELECT id FROM users')
     # filling events
@@ -45,7 +46,7 @@ namespace :tables do
                         content: arr.last,
                         done: false,
                         user_id: users.rows.sample.first
-      event.save if event.valid? == true
+      event.save if event.valid?
     end
     # filling items
     events = ActiveRecord::Base.connection.exec_query('SELECT * FROM events')
@@ -59,7 +60,7 @@ namespace :tables do
       item = Item.new name: row.chomp,
                       done: false,
                       event_id: @ev_id
-      item.save if item.valid? == true
+      item.save if item.valid?
     end
   end
 end
